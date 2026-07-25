@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-ph-black text-ph-text antialiased; }
+}
+
+@layer components {
+  .ph-btn-primary {
+    @apply inline-flex items-center gap-1.5 px-3 py-2 text-[13px] font-bold bg-ph-orange text-white hover:bg-ph-orange-hover transition-colors;
+  }
+  .ph-input {
+    @apply w-full bg-white dark:bg-ph-dark border border-ph-border-light dark:border-ph-border px-3 py-2 text-sm focus:border-ph-orange focus:outline-none;
+  }
+  .ph-label {
+    @apply mb-1 block text-[11px] font-bold uppercase tracking-wider text-ph-text-muted;
+  }
+  .ph-section {
+    @apply flex items-center justify-between border-b border-ph-border-light dark:border-ph-border pb-2 mb-4;
+  }
+  .ph-section h2 { @apply text-[18px] font-bold text-ph-text-dark dark:text-white; }
+  .ph-section-accent { @apply h-0.5 w-8 bg-ph-orange mt-1; }
+}
+
+@layer utilities {
+  .text-ph-orange { color: #FF9900; }
+  .bg-ph-orange { background: #FF9900; }
+  .bg-ph-black { background: #0D0D0D; }
+  .bg-ph-dark { background: #1A1A1A; }
+  .bg-ph-dark-2 { background: #242424; }
+  .border-ph-border { border-color: #3A3A3A; }
+  .border-ph-border-light { border-color: #E0E0E0; }
+  .text-ph-text { color: #FFFFFF; }
+  .text-ph-text-dark { color: #1A1A1A; }
+  .text-ph-text-secondary { color: #B0B0B0; }
+  .text-ph-text-muted { color: #888888; }
+}
